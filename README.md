@@ -17,7 +17,7 @@ Then visit `http://localhost:8000`.
 - Responsive studio overview and dedicated Colour Analysis, My Wardrobe, and Outfit Ideas pages.
 - Clear colour-profile results with labelled palette swatches, click-to-copy colour values, and styling notes.
 - Local selfie preview and sample profile.
-- Wardrobe photo uploads, average image colour sampling, browser-local persistence, and remove controls.
+- Wardrobe photo uploads, dominant image colour sampling, browser-local persistence, and remove controls.
 - Photo-based colour estimates can vary between Light Spring, Soft Summer, Warm Autumn, and Clear Winter instead of always returning one palette. Optional undertone and depth controls let users refine the estimate.
 - Wardrobe photos are resized before saving, and colour sampling de-emphasizes blank white backgrounds.
 - Outfit combination cards populated from wardrobe items, with a mix-it-up animation.
