@@ -1,6 +1,6 @@
 # CHROMA AI
 
-A responsive, multi-page personal colour and wardrobe styling studio. It runs directly in a modern browser and does not need a package install or build step.
+A small personal styling studio with three steps: profile entry, skin-colour guidance, and category-aware wardrobe pairings.
 
 ## Run it
 
@@ -14,16 +14,11 @@ Then visit `http://localhost:8000`.
 
 ## Included
 
-- Responsive studio overview and dedicated Colour Analysis, My Wardrobe, and Outfit Ideas pages.
-- Clear colour-profile results with labelled palette swatches, click-to-copy colour values, and styling notes.
-- First-visit local profile gate, then a separate colour-analysis flow.
-- Skin-tone result is shown as Light, Medium, or Deep with a separate Warm, Neutral, or Cool undertone estimate; sample profiles are clearly marked.
-- Colour palette suggestions are a styling aid derived from the skin-tone estimate, not the analysis result itself.
-- Wardrobe photo uploads, dominant image colour sampling, browser-local persistence, and remove controls.
-- Photo estimates use central skin-like pixels and CIELAB lightness/colour differences for a tentative skin tone and undertone. Low-signal images show guidance instead of receiving a random result. Users can manually refine tone and undertone or explore labelled sample profiles.
-- Wardrobe photos are resized before saving, and colour sampling de-emphasizes blank white backgrounds.
-- Outfit combination cards populated from wardrobe items, with a mix-it-up animation.
-- Floating and animated graphics with reduced-motion support.
+- Login/profile entry, skin-tone guidance, and wardrobe pages.
+- Skin tone and undertone estimates with a small palette suggestion, confidence note, and manual adjustment.
+- Clothing categories: tops, bottoms, one-pieces, shoes, outerwear, and accessories.
+- Outfit rules pair a top with a bottom; one-pieces are styled separately. Optional missing-item suggestions appear when relevant.
+- Wardrobe photos, dominant colour extraction, browser-local storage, edit-category and remove controls.
 - GitHub Pages deployment workflow in `.github/workflows/deploy.yml`.
 - Wardrobe images are resized and saved in IndexedDB (with a localStorage fallback and legacy migration); clearing site data removes them.
 - Profile names and analysis completion are stored locally. This is a demo entry screen, not secure authentication; no password, remote database, or cross-device account is configured.
@@ -33,7 +28,7 @@ Then visit `http://localhost:8000`.
 - `index.html` — studio overview
 - `colour-analysis.html` — colour analysis page
 - `wardrobe.html` — digital wardrobe page
-- `outfits.html` — outfit ideas page
+- `outfits.html` — forwards to wardrobe pairings
 - `styles.css` — shared responsive visual design and effects
 - `app.js` — browser interactions and local image handling
 
