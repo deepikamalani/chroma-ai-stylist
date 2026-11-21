@@ -17,9 +17,10 @@ Then visit `http://localhost:8000`.
 - Responsive studio overview and dedicated Colour Analysis, My Wardrobe, and Outfit Ideas pages.
 - Clear colour-profile results with labelled palette swatches, click-to-copy colour values, and styling notes.
 - First-visit local profile gate, then a separate colour-analysis flow.
-- Four distinct seasonal palette examples; users can cycle demos or choose a season manually.
+- Skin-tone result is shown as Light, Medium, or Deep with a separate Warm, Neutral, or Cool undertone estimate; sample profiles are clearly marked.
+- Colour palette suggestions are a styling aid derived from the skin-tone estimate, not the analysis result itself.
 - Wardrobe photo uploads, dominant image colour sampling, browser-local persistence, and remove controls.
-- Photo estimates use a central skin-colour heuristic and CIELAB colour differences to choose among Clear Spring, Soft Summer, Warm Autumn, and Cool Winter. Low-signal images show guidance instead of receiving a random result. Manual season selection and sample palettes are available.
+- Photo estimates use central skin-like pixels and CIELAB lightness/colour differences for a tentative skin tone and undertone. Low-signal images show guidance instead of receiving a random result. Users can manually refine tone and undertone or explore labelled sample profiles.
 - Wardrobe photos are resized before saving, and colour sampling de-emphasizes blank white backgrounds.
 - Outfit combination cards populated from wardrobe items, with a mix-it-up animation.
 - Floating and animated graphics with reduced-motion support.
@@ -38,7 +39,7 @@ Then visit `http://localhost:8000`.
 
 ## AI/ML project extension
 
-The photo analysis currently runs locally in the browser. It samples the central image region, filters for skin-like pixels, then applies CIELAB colour differences and lightness to choose a seasonal starting palette. This is explainable image processing, not a trained AI model or validated skin-tone assessment. Lighting, makeup, camera processing, and backgrounds can change the estimate. For a research-grade AI/ML system, replace the heuristic with a validated model and controlled photo pipeline, report uncertainty, and test across skin tones and devices. Clothing colour extraction uses a small image canvas; outfit ideas are colour-pairing suggestions rather than a fashion-trained recommender.
+The photo analysis currently runs locally in the browser. It samples the central image region, filters for skin-like pixels, then uses CIELAB lightness and colour differences to estimate Light/Medium/Deep tone and Warm/Neutral/Cool undertone. This is explainable image processing, not a trained AI model or validated skin-tone assessment. Lighting, makeup, camera processing, and backgrounds can change the estimate. For a research-grade AI/ML system, replace the heuristic with a validated model and controlled photo pipeline, report uncertainty, and test across skin tones and devices. Palette suggestions are a styling aid, and outfit ideas are colour-pairing suggestions rather than a fashion-trained recommender.
 
 Uploaded clothing images are resized and saved in this browser's IndexedDB; clearing site data removes them. Selfies are previewed in memory and are not uploaded. Add a hosted authentication service, database, and image storage for secure accounts and cross-device sync.
 
